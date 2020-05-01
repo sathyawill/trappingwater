@@ -8,5 +8,12 @@ mvn clean install
 
 #Following was done as part of the logic
 
-* Taken the left and right pointers and traversed the array list using those two pointers
-* whatever is left between left element and right element or viceversa would be the unit of water that is saved
+Here is my understanding of the problem, for each element i need to find how much unit of water it can trap after rain.
+For that i need to find if current element has a left which is smaller that right or vice versa.
+If any of the condition is met, then i have to deduct the value of current element from the minimum of maximum and then deduct it from the maximum.
+
+Eg. 1,0,2
+
+Minimum of maximum of bars of element at 1(value zero) = 1
+Deduct the current element from the left and right side values = 2 -1-0 -> 1, this need to be done for every element and sum the values
+
